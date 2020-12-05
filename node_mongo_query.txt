@@ -1,6 +1,6 @@
 router.get('/user',auth,async(req, res)=>{
     try{
-        // const user = await User.find({})
+        // const user = await User.find({}) //get all record
         // const user = await User.find().sort({_id:-1}) // sort order by id //-1 for desc and 1 for asc
         // const user = await User.find({name:'anant'})  // find name is equal to 'anant'
         // const user = await User.find({name:'anant'}).where('email').equals('anant@gmail.com') //find name 'anant' where email='anant@gmail.com'
@@ -29,6 +29,9 @@ router.get('/user',auth,async(req, res)=>{
 // if (err) return handleError(err);
 // console.log('%s %s is a %s.', person.name.first, person.name.last, person.occupation) // Space Ghost is a talk show host
 // })
+
+//https://www.oreilly.com/library/view/mongodb-the-definitive/9781449344795/ch04.html
+
         res.send(user)
     }catch(e)
     {
