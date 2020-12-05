@@ -1,0 +1,37 @@
+router.get('/user',auth,async(req, res)=>{
+    try{
+        // const user = await User.find({})
+        // const user = await User.find().sort({_id:-1}) // sort order by id //-1 for desc and 1 for asc
+        // const user = await User.find({name:'anant'})  // find name is equal to 'anant'
+        // const user = await User.find({name:'anant'}).where('email').equals('anant@gmail.com') //find name 'anant' where email='anant@gmail.com'
+        // const user = await User.find().limit(2).sort('-_id')  // limit 2 order by id desc
+        // const user = await User.find().limit(2).sort('-_id').select('name email') // select name,email from table with limit 2 order by id desc
+        // const user = await User.find().where('name').in(['123','vicky1']) // find details where name in ('anant','vicky')
+        // const user = await User.find({'name':/.*an.*/}) // find name likes %an% ( contain an in middle)(% with .* replace in node)
+        // const user = await User.find({'name':/123/}) // find name likes %123% ( contain an in middle)(% with .* replace in node)
+        // const user = await User.find({'name':/^123/}) // find name likes 123% (starting with 123)
+        // const user = await User.find({'name':/1234$/}) // find name likes %1234 (end with 1234)
+        // const user = await User.find({'name': {'$regex': '123'}}) // find name likes %123% using reg expression
+
+//         // Build up a query using chaining syntax. Since no callback is passed this will create an instance of Query.
+// var query = Person.
+// find({ occupation: /host/ }).
+// where('name.last').equals('Ghost'). // find each Person with a last name matching 'Ghost'
+// where('age').gt(17).lt(66).
+// where('likes').in(['vaporizing', 'talking']).
+// limit(10).
+// sort('-occupation'). // sort by occupation in decreasing order
+// select('name occupation'); // selecting the `name` and `occupation` fields
+
+
+// // Excute the query at a later time.
+// query.exec(function (err, person) {
+// if (err) return handleError(err);
+// console.log('%s %s is a %s.', person.name.first, person.name.last, person.occupation) // Space Ghost is a talk show host
+// })
+        res.send(user)
+    }catch(e)
+    {
+        res.status(500).send(e)
+    }
+})
